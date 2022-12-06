@@ -25,15 +25,11 @@ while i < len(lines):
     i3 = 0
     found = ''
     while not found and i1 < count1 and i2 < count2 and i3 < count3:
-#        print('i1={i1}, i2={i2}, i3={i3}'.format(i1=i1, i2=i2, i3=i3))
         while (line1[i1] < line2[i2] or line1[i1] < line3[i3]) and i1 < count1:
-#            print('i1={i1}, i2={i2}, i3={i3}'.format(i1=i1, i2=i2, i3=i3))
             i1 += 1
         while (line2[i2] < line1[i1] or line2[i2] < line3[i3]) and i2 < count2:
-#            print('i1={i1}, i2={i2}, i3={i3}'.format(i1=i1, i2=i2, i3=i3))
             i2 += 1
         while (line3[i3] < line1[i1] or line3[i3] < line2[i2]) and i3 < count3:
-#            print('i1={i1}, i2={i2}, i3={i3}'.format(i1=i1, i2=i2, i3=i3))
             i3 += 1
         if line1[i1] == line2[i2] and line2[i2] == line3[i3]:
             found = line1[i1]
