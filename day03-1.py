@@ -5,7 +5,7 @@ priorities = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
 # Read the file
 
-file = open('day3-input.txt', mode = 'r', encoding = 'utf-8-sig')
+file = open('day03-input.txt', mode = 'r', encoding = 'utf-8-sig')
 lines = file.readlines()
 file.close()
 

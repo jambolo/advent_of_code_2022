@@ -8,7 +8,7 @@ regex = '(\d+)-(\d+),(\d+)-(\d+)'
 
 # Read the file
 
-file = open('day4-input.txt', mode = 'r', encoding = 'utf-8-sig')
+file = open('day04-input.txt', mode = 'r', encoding = 'utf-8-sig')
 lines = file.readlines()
 file.close()
 

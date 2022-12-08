@@ -1,5 +1,5 @@
 # Advent of Code 2022
-# Day 5, part 2
+# Day 5, part 1
 
 import re
 
@@ -17,13 +17,10 @@ def drawPiles(piles):
             else:
                 print('    ', end='')
         print('')
-    for i in range(0, len(piles)):
-        print(' {i}  '.format(i=i+1), end='')
-    print('')
 
 # Read the file
 
-file = open('day5-input.txt', mode = 'r', encoding = 'utf-8-sig')
+file = open('day05-input.txt', mode = 'r', encoding = 'utf-8-sig')
 lines = file.readlines()
 file.close()
 
@@ -43,7 +40,7 @@ for i in range(0, 8):
             piles[p].insert(0, crate)
 
 # Draw the piles
-#drawPiles(piles)
+drawPiles(piles)
 
 # Process the move commands: move {count} from {from} to {to}
 # Move commands start at line 10
@@ -54,18 +51,19 @@ while i < len(lines):
     line = lines[i].strip()
     match = re.search(moveRe, line)
     count = int(match.group(1))
-    iFrom = int(match.group(2)) - 1
-    iTo = int(match.group(3)) - 1
-#    print('move {count} from {iFrom} to {iTo}'.format(count=count, iFrom=iFrom+1, iTo=iTo+1))
+    fromPile = int(match.group(2)) - 1
+    toPile = int(match.group(3)) - 1
+#    print('move {count} from {fromPile} to {toPile}'.format(count=count, fromPile=fromPile+1, toPile=toPile+1))
 
     # Move the crates
-    piles[iTo].extend(piles[iFrom][-count:])
-    piles[iFrom] = piles[iFrom][:-count]
+    for j in range(0, count):
+        crate = piles[fromPile].pop()
+        piles[toPile].append(crate)
 
     i = i + 1
 
 # Draw the result
-#drawPiles(piles)
+drawPiles(piles)
 
 # List the tops of the piles as specified
 for pile in piles:

@@ -15,7 +15,7 @@ def printMarker(buffer, i):
 
 #test = 'mjqjpqmgbljsphdztnvjfqwrcgsmlb'
 
-file = open('day6-input.txt', 'r')
+file = open('day06-input.txt', 'r')
 
 buffer = []
 for i in range(0, MARKER_SIZE):

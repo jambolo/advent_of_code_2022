@@ -76,7 +76,7 @@ def drawFileSystem(node, spaces):
 
 # Read the file
 
-file = open('day7-input.txt', mode = 'r', encoding = 'utf-8-sig')
+file = open('day07-input.txt', mode = 'r', encoding = 'utf-8-sig')
 lines = file.readlines()
 file.close()
 

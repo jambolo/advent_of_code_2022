@@ -69,7 +69,7 @@ def chooseMyMove(them, outcome):
 
 # Read the file
 
-file = open('day2-input.txt', mode = 'r', encoding = 'utf-8-sig')
+file = open('day02-input.txt', mode = 'r', encoding = 'utf-8-sig')
 lines = file.readlines()
 file.close()
 
